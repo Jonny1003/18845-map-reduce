@@ -25,7 +25,7 @@ std::vector<int> IdentityTask::reduce(const std::string& key, const std::vector<
     for (const auto& v : values) {
         acc += v;
     }
-    return std::vector<int>(acc);
+    return std::vector<int>({acc});
 }
 
 // Serialize/hash intermediate key functionality (always to and from a string)
@@ -65,4 +65,8 @@ int IdentityTask::deserializeMapValue(const std::string& valueString) const {
 
 const std::map<std::string, int>& IdentityTask::getTaskSet() const {
     return taskSet_;
+}
+
+const std::string& IdentityTask::getOutFolder() const {
+    return outFolder_;
 }

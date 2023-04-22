@@ -9,8 +9,8 @@
  * 
  */
 
-#ifndef IDENTITY_TASK_H
-#define IDENTITY_TASK_H
+#ifndef DOUBLING_TASK_H
+#define DOUBLING_TASK_H
 
 
 #include <stdlib.h>
@@ -22,9 +22,9 @@
 /**
  * @brief Identity task
  */
-class IdentityTask {
+class DoublingTask {
 public:
-    IdentityTask(std::map<std::string, int>&& taskSet, std::string& outFolder) :
+    DoublingTask(std::map<std::string, int>&& taskSet, std::string& outFolder) :
         taskSet_(std::move(taskSet)), outFolder_(outFolder) {};
 
     // Map interface
@@ -56,4 +56,4 @@ private:
     std::string outFolder_;
 };
 
-#endif /* IDENTITY_TASK_H */
+#endif /* DOUBLING_TASK_H */

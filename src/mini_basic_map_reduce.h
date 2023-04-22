@@ -18,6 +18,8 @@
 #include <vector>
 #include <algorithm>
 #include <numeric>
+#include <fstream>
+#include <type_traits>
 
 enum WorkerType {MAP, REDUCE, NONE};
 enum Progress {QUEUEING, IN_PROGRESS, COMPLETED};
@@ -61,6 +63,10 @@ public:
         }
     };
 
+    int keyToPid(const std::string& key) {
+        return 1 + (std::hash<std::string>{}(key) % numWorkers);
+    };
+
     template<class Task>
     int run(const Task& task) {
         size_t numMapTasks;
@@ -69,7 +75,6 @@ public:
             // initialize coordinator
             const auto& taskSet = task.getTaskSet();
 
-            // MPI_Bcast(&numMapTasks, 1, MPI_LONG, MASTER_THREAD, MPI_COMM_WORLD);
             std::cout << "Total tasks" << taskSet.size() << "\n";
 
             // Static work allocation for now...
@@ -149,7 +154,7 @@ public:
                         vals.push_back(task.serializeReduceValue(v));
                         localMapResults.emplace(task.serializeReduceKey(k), std::move(vals));
                     }
-                    std::cout << "PID: " << MR::pid << " " << localMapResults.find(k)->second[0] << "\n";
+                    std::cout << "PID: " << MR::pid << " " << k << " " << localMapResults.find(k)->second[0] << "\n";
                 }
             }
         }
@@ -160,7 +165,11 @@ public:
         MPI_Gather(&localMapResSize, 1, MPI_LONG,
             numReduceKeysPerThread.data(), 1, MPI_LONG,
             MASTER_THREAD, MPI_COMM_WORLD);
+        std::cout << "here!\n";
+        std::map<std::string, std::vector<std::string>> reduceWork;
         if (isMaster()) {
+            std::multimap<std::string, std::pair<int,int>> keySources;
+
             // Gather and sort keys into reduce work
             for (auto srcid = 1; srcid < MR::nproc; ++srcid) {
                 // Recieve an array of key sizes
@@ -169,15 +178,52 @@ public:
                 size_t totLen = std::accumulate(keyWidths.cbegin(), keyWidths.cend(), 0);
                 char keys[totLen];
                 MPI_Recv(keys, totLen, MPI_CHAR, srcid, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+
+                // Fetch the number of entries associated with each key
+                std::vector<int> numEntries(numReduceKeysPerThread[srcid]);
+                MPI_Recv(numEntries.data(), numEntries.size(), MPI_INT, srcid, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+
+
                 size_t keyStart = 0;
-                for (const auto& width : keyWidths) {
+                for (size_t ki = 0; ki < numReduceKeysPerThread[srcid]; ++ki) {
+                    const auto& width = keyWidths[ki];
                     const auto key = std::string(&keys[keyStart], width);
-                    std::cout << key << "\n";
-                    const auto reduceWorker = 1 + (std::hash<std::string>{}(key) % numWorkers);
-                    std::cout << "MASTER: " << key << "->" << reduceWorker << "\n";
+                    const auto reduceWorker = keyToPid(key);
+                    keySources.insert({key, {srcid, numEntries[ki]}});
                     progressManager[reduceWorker].reduceAssigned.insert(std::move(key));
                     keyStart += width;
                 }
+            }
+
+            for (size_t destid = 1; destid < MR::nproc; ++destid) {
+                auto& worker = progressManager[destid];
+                worker.type = REDUCE;
+                worker.progress = QUEUEING;
+                const auto numKeys = worker.reduceAssigned.size();
+                MPI_Send(&numKeys, 1, MPI_LONG, destid, 0, MPI_COMM_WORLD);
+                std::for_each(worker.reduceAssigned.cbegin(), worker.reduceAssigned.cend(), [&](const auto& key) {
+                    // TODO: Optimize to batch or make asynchronous
+                    // Send key size
+                    size_t keySizeSrcs[2];
+                    keySizeSrcs[0] = key.length();
+                    const auto [startSrc, endSrc] = keySources.equal_range(key);
+                    keySizeSrcs[1] = std::distance(startSrc, endSrc);
+                    const auto& numSrcs = keySizeSrcs[1];
+                    MPI_Send(&keySizeSrcs, 2, MPI_LONG, destid, 0, MPI_COMM_WORLD);
+
+                    // Send key
+                    MPI_Send(key.data(), key.length(), MPI_CHAR, destid, 0, MPI_COMM_WORLD);
+
+                    // Send key sources
+                    std::vector<int> srcs(numSrcs * 2);
+                    auto srcIt = startSrc;
+                    for (size_t i = 0; i < numSrcs; ++i) {
+                        srcs[2 * i] = srcIt->second.first;
+                        srcs[2 * i + 1] = srcIt->second.second;
+                        std::advance(srcIt, 1);
+                    }
+                    MPI_Send(srcs.data(), srcs.size(), MPI_INT, destid, 0, MPI_COMM_WORLD);
+                });
             }
         } else {
             // Send reduce keys to master
@@ -186,14 +232,103 @@ public:
                 [] (const auto& kv) {return kv.first.length();});
             MPI_Send(keyWidths.data(), keyWidths.size(), MPI_LONG, MASTER_THREAD, 0, MPI_COMM_WORLD);
             std::vector<char> keys;
+            std::vector<int> numEntries;
             std::for_each(localMapResults.cbegin(), localMapResults.cend(),
-                [&keys] (const auto& kv) {keys.insert(keys.cend(), kv.first.cbegin(), kv.first.cend());});
+                [&keys, &numEntries] (const auto& kv) {
+                    keys.insert(keys.cend(), kv.first.cbegin(), kv.first.cend());
+                    numEntries.push_back(kv.second.size());});
             MPI_Send(keys.data(), keys.size(), MPI_CHAR, MASTER_THREAD, 0, MPI_COMM_WORLD);
+            MPI_Send(numEntries.data(), numEntries.size(), MPI_INT, MASTER_THREAD, 0, MPI_COMM_WORLD);
+
+            // Get assigned keys from master
+            size_t numKeys;
+            MPI_Recv(&numKeys, 1, MPI_LONG, MASTER_THREAD, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+
+            std::map<std::string, std::vector<std::pair<int, int>>> keySources;
+            for (size_t i = 0; i < numKeys; ++i) {
+                size_t keySizeSrcs[2];
+                MPI_Recv(keySizeSrcs, 2, MPI_LONG, MASTER_THREAD, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                const size_t& keySize = keySizeSrcs[0];
+                const size_t& numSrcs = keySizeSrcs[1];
+
+                // Get key
+                std::vector<char> key(keySize);
+                MPI_Recv(key.data(), key.size(), MPI_CHAR, MASTER_THREAD, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+
+                // Get key sources and number of mapped values
+                std::vector<int> srcs(numSrcs * 2);
+                MPI_Recv(srcs.data(), srcs.size(), MPI_INT, MASTER_THREAD, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                std::vector<std::pair<int, int>> srcPairs;
+                for (size_t i = 0; i < numSrcs; ++i) {
+                    srcPairs.push_back({srcs[2 * i], srcs[2 * i + 1]});
+                }
+                std::cout << "Pid " << MR::pid << " got key " << std::string(key.data(), key.size()) << "\n";
+                keySources[std::string(key.data(), key.size())] = std::move(srcPairs);
+            }
+
+            // Fetch values for each key
+            size_t numVals = std::accumulate(localMapResults.cbegin(), localMapResults.cend(), 0,
+                [] (const size_t& acc, const auto& res) {
+                    return acc + res.second.size();});
+            std::vector<MPI_Request> requests(numVals * 2);
+            std::vector<size_t> valueLens(numVals * 2);
+            size_t numReqs = 0;
+            for (auto it = localMapResults.cbegin(); it != localMapResults.cend(); ++it) {
+                const auto destpid = keyToPid(it->first);
+                if (destpid == MR::pid) {
+                    if (reduceWork.contains(it->first)) {
+                        reduceWork[it->first].insert(reduceWork[it->first].cend(), it->second.cbegin(), it->second.cend());
+                    } else {
+                        reduceWork[it->first] = it->second;
+                    }
+                } else {
+                    for (auto val = it->second.cbegin(); val < it->second.cend(); ++val) {
+                        valueLens[numReqs] = val->size();
+                        MPI_Isend(&valueLens[numReqs], 1, MPI_LONG, destpid, 0, MPI_COMM_WORLD, &requests[numReqs]);
+                        MPI_Isend(val->data(), val->size(), MPI_CHAR, destpid, 0, MPI_COMM_WORLD, &requests[numReqs + 1]);
+                        numReqs += 2;
+                    }
+                }
+            }
+            std::cout << "Pid " << MR::pid << " sending " << numReqs << " requests\n";
+
+            // Send reduce sizes values per key
+            for (auto keyIt = keySources.cbegin(); keyIt != keySources.cend(); ++keyIt) {
+                reduceWork.emplace(keyIt->first, std::vector<std::string>());
+                auto& values = reduceWork[keyIt->first];
+                for (auto srcIt = keyIt->second.cbegin(); srcIt < keyIt->second.cend(); ++srcIt) {
+                    if (srcIt->first == MR::pid) {continue;}
+                    for (auto valInd = 0; valInd < srcIt->second; ++valInd) {
+                        size_t valSize;
+                        MPI_Recv(&valSize, 1, MPI_LONG, srcIt->first, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                        values.push_back(std::string(valSize, '\0'));
+                        MPI_Recv(values[valInd].data(), valSize, MPI_CHAR, srcIt->first, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                    }
+                }
+                for (const auto& s : values) {
+                    std::cout << "PID " << MR::pid << ' ' << keyIt->first << " val " << s << "\n";
+                }
+            }
+            MPI_Waitall(numReqs, requests.data(), MPI_STATUSES_IGNORE);
         }
 
-        // Send reduce keys
-        
-
+        // Do reduce operation
+        if (!isMaster()) {
+            for (const auto& [k,vs] : reduceWork) {
+                std::ofstream out;
+                out.open(task.getOutFolder() + "/" + k);
+                using VR = decltype(task.deserializeReduceValue(""));
+                std::vector<VR> vrs(vs.size());
+                std::transform(vs.cbegin(), vs.cend(), vrs.begin(), [&task](const auto& v) {
+                    return task.deserializeReduceValue(v);});
+                const auto res = task.reduce(task.deserializeReduceKey(k), vrs);
+                for (const auto& r : res) {
+                    const auto rStr = task.serializeReduceValue(r);
+                    out << rStr.length() << " " << rStr;
+                }
+                out.close();
+            }
+        }
 
         return 0;
     }
