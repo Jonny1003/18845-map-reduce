@@ -14,6 +14,8 @@
 #include <iostream>
 #include "identity_task.h"
 #include "doubling_task.h"
+#include "text_gen_task.h"
+#include "word_count_task.h"
 #include "mini_basic_map_reduce.h"
 #include <map>
 
@@ -27,12 +29,34 @@ int main(int argc, char *argv[])
 
     // mapReduce.run<IdentityTask>(idTask);
 
-    std::map<std::string, int> kvs({{"a", 42}, {"b", 101}, {"c", 17}, {"d", 13}});
-    std::string outLoc = "./out";
-    DoublingTask idTask(std::move(kvs), outLoc);
+    // std::map<std::string, int> kvs({{"a", 42}, {"b", 101}, {"c", 17}, {"d", 13}});
+    // std::string outLoc = "./out";
+    // DoublingTask idTask(std::move(kvs), outLoc);
+
+    // MiniBasicMapReduce mapReduce (argc, argv);
+
+    // mapReduce.run<DoublingTask>(idTask);
+
+    // std::map<std::string, std::string> kvs;
+    // for (int i = 0; i < 80; ++i) {
+    //     kvs.emplace(std::to_string(i), "");
+    // }
+    // std::string outLoc = "./out";
+    // TextGenTask task(std::move(kvs), outLoc);
+
+    // MiniBasicMapReduce mapReduce (argc, argv);
+
+    // mapReduce.run<TextGenTask>(task);
+
+    std::map<std::string, std::string> kvs;
+    for (int i = 0; i < 80; ++i) {
+        kvs.emplace(std::to_string(i), "./out/" + std::to_string(i));
+    }
+    std::string outLoc = "./results";
+    WordCountTask task(std::move(kvs), outLoc);
 
     MiniBasicMapReduce mapReduce (argc, argv);
 
-    mapReduce.run<DoublingTask>(idTask);
+    mapReduce.run<WordCountTask>(task);
     return 0;
 }
