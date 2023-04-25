@@ -15,17 +15,20 @@
 #include <random>
 #include <functional>
 #include <fstream>
+#include <ctime>
 
-// Set to some reasonable value less than system ram
-constexpr size_t TOT_NUM_BYTES = 2UL << 28;
+
 
 
 constexpr auto UNEVEN_DISTRIBUTION = false;
 
+// Set to some reasonable value less than system ram
+constexpr size_t TOT_NUM_BYTES = 2 * (1UL << 29);
+
 // Map interface
 std::vector<std::pair<std::string, std::string>> TextGenTask::map(const std::string& key, const std::string& value) const {
     (void) value;
-    std::srand(std::hash<std::string>{}(key));
+    std::srand(std::time(0));
     auto bytesPerTask = TOT_NUM_BYTES / taskSet_.size();
     if constexpr (UNEVEN_DISTRIBUTION) {
         const auto ratio = 2.0f * static_cast<float>(std::rand()) / static_cast<float>(RAND_MAX);

@@ -17,13 +17,21 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <iostream>
+
 
 
 /**
- * @brief Identity task
+ * @brief Generates ASCII text task
  */
 class TextGenTask {
 public:
+    using MK = std::string;
+    using RK = std::string;
+    using MV = std::string;
+    using RV = std::string;
+    using TaskType = std::map<std::string, std::string>;
+
     TextGenTask(std::map<std::string, std::string>&& taskSet, std::string& outFolder) :
         taskSet_(std::move(taskSet)), outFolder_(outFolder) {};
 

@@ -1,4 +1,4 @@
-CFLAGS := -std=c++23 -fvisibility=hidden -lpthread -Wall -Wextra
+CFLAGS := -std=c++17 -fvisibility=hidden -lpthread -Wall -Wextra
 
 ifeq (,$(CONFIGURATION))
 	CONFIGURATION := basic
@@ -6,7 +6,6 @@ else
 	CONFIGURATION := tree
 endif
 
-CFLAGS += -g
 CFLAGS += -O3 -g
 CXX = mpic++
 

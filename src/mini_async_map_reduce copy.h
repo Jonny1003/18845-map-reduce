@@ -9,8 +9,8 @@
  *
  */
 
-#ifndef MINI_BASIC_MAP_REDUCE_H
-#define MINI_BASIC_MAP_REDUCE_H
+#ifndef MINI_ASYNC_MAP_REDUCE_H
+#define MINI_ASYNC_MAP_REDUCE_H
 
 #include <iostream>
 #include <set>
@@ -24,11 +24,11 @@
 #include "map_reduce.h"
 #include "util.h"
 
-class MiniBasicMapReduce : public MapReduce {
+class MiniAsyncMapReduce : MapReduce {
 public:
     using MR = MapReduce;
 
-    MiniBasicMapReduce(int argc, char *argv[]) : MR(argc, argv) {
+    MiniAsyncMapReduce(int argc, char *argv[]) : MR(argc, argv) {
         if (MR::nproc == 1) {
             if (MR::isMaster()) {
                 std::cout << "Not enough processors to run basic map reduce!\n";
@@ -358,7 +358,7 @@ public:
                 for (auto j = 0; j < timings.size(); ++j) {
                     MPI_Recv(otherTimings + j, 1, MPI_LONG, i, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
                 }
-                log << "PID " << i <<
+                log << "PID " << MR::pid <<
                     mSetup << otherTimings[0] <<
                     mapTime << otherTimings[1] <<
                     rSetup << otherTimings[2] <<
@@ -382,4 +382,4 @@ private:
     std::vector<WorkerProgress<std::string, std::string>> progressManager;
 };
 
-#endif /* MINI_BASIC_MAP_REDUCE_H */
+#endif /* MINI_ASYNC_MAP_REDUCE_H */

@@ -24,6 +24,10 @@
  */
 class WordCountTask {
 public:
+    using MK = std::string;
+    using RK = std::string;
+    using MV = std::string;
+    using RV = int;
     using TaskType = std::map<std::string, std::string>;
 
     WordCountTask(TaskType&& taskSet, std::string& outFolder) :

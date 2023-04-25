@@ -1,0 +1,563 @@
+1.1Gigabytes across 1000 files evenly distributed
+
+4 slots
+PID 0 Map Setup: 584us Map Time: 16326220us Reduce Setup: 127473229us Reduce Time: 5948us
+PID 1 Map Setup: 487518us Map Time: 16527497us Reduce Setup: 127273763us Reduce Time: 7606us
+PID 2 Map Setup: 528810us Map Time: 26722004us Reduce Setup: 117082478us Reduce Time: 4550us
+PID 3 Map Setup: 803us Map Time: 8338491us Reduce Setup: 135446857us Reduce Time: 6832us
+Pid 3 sending 93842 requests
+Pid 0 sending 183632 requests
+Pid 1 sending 183582 requests
+Pid 2 sending 299664 requests
+Word count time: 143810481us
+
+8 slots
+PID 0 Map Setup: 721us Map Time: 9661017us Reduce Setup: 60003753us Reduce Time: 4295us
+PID 1 Map Setup: 299233us Map Time: 10631019us Reduce Setup: 58992548us Reduce Time: 4037us
+PID 2 Map Setup: 99814us Map Time: 10723444us Reduce Setup: 58938550us Reduce Time: 3991us
+PID 3 Map Setup: 23877us Map Time: 10534062us Reduce Setup: 59125509us Reduce Time: 4531us
+PID 4 Map Setup: 413033us Map Time: 13334942us Reduce Setup: 56329317us Reduce Time: 3642us
+PID 5 Map Setup: 81025us Map Time: 13478189us Reduce Setup: 56189181us Reduce Time: 3627us
+PID 6 Map Setup: 9720us Map Time: 13400141us Reduce Setup: 56270162us Reduce Time: 4405us
+PID 7 Map Setup: 6097us Map Time: 2762902us Reduce Setup: 66874330us Reduce Time: 4230us
+Word count time: 69676133us
+Pid 7 sending 33712 requests
+Pid 0 sending 120360 requests
+Pid 1 sending 125194 requests
+Pid 3 sending 128366 requests
+Pid 2 sending 137940 requests
+Pid 6 sending 157494 requests
+Pid 4 sending 162840 requests
+Pid 5 sending 164400 requests
+
+16 slots
+PID 0 Map Setup: 22321us Map Time: 11875796us Reduce Setup: 28886780us Reduce Time: 2358us
+PID 1 Map Setup: 80121us Map Time: 13519983us Reduce Setup: 27208339us Reduce Time: 1911us
+PID 2 Map Setup: 347821us Map Time: 12105671us Reduce Setup: 28509941us Reduce Time: 1753us
+PID 3 Map Setup: 222704us Map Time: 11987987us Reduce Setup: 28699572us Reduce Time: 3946us
+PID 4 Map Setup: 628473us Map Time: 12587913us Reduce Setup: 28150745us Reduce Time: 2823us
+PID 5 Map Setup: 472860us Map Time: 12151045us Reduce Setup: 28483680us Reduce Time: 1623us
+PID 6 Map Setup: 305383us Map Time: 12379937us Reduce Setup: 28290837us Reduce Time: 2142us
+PID 7 Map Setup: 99918us Map Time: 12212408us Reduce Setup: 28524981us Reduce Time: 3552us
+PID 8 Map Setup: 116801us Map Time: 14502068us Reduce Setup: 26190380us Reduce Time: 2990us
+PID 9 Map Setup: 533176us Map Time: 13297322us Reduce Setup: 27431096us Reduce Time: 2282us
+PID 10 Map Setup: 150597us Map Time: 13477320us Reduce Setup: 27261042us Reduce Time: 2276us
+PID 11 Map Setup: 150521us Map Time: 14447904us Reduce Setup: 26254799us Reduce Time: 1926us
+PID 12 Map Setup: 320327us Map Time: 14495949us Reduce Setup: 26175519us Reduce Time: 3922us
+PID 13 Map Setup: 160455us Map Time: 13715982us Reduce Setup: 26971227us Reduce Time: 2221us
+PID 14 Map Setup: 130442us Map Time: 12884691us Reduce Setup: 27807282us Reduce Time: 1994us
+PID 15 Map Setup: 215766us Map Time: 936333us Reduce Setup: 39775852us Reduce Time: 4014us
+Word count time: 40792603us
+Pid 4 sending 74694 requests
+Pid 10 sending 83460 requests
+Pid 13 sending 83424 requests
+Pid 14 sending 79112 requests
+Pid 6 sending 77880 requests
+
+32 slots
+PID 0 Map Setup: 36703us Map Time: 13207787us Reduce Setup: 14833811us Reduce Time: 1349us
+PID 1 Map Setup: 245982us Map Time: 12062851us Reduce Setup: 16048328us Reduce Time: 9057us
+PID 2 Map Setup: 180742us Map Time: 13343656us Reduce Setup: 14670790us Reduce Time: 1194us
+PID 3 Map Setup: 349939us Map Time: 11423876us Reduce Setup: 16638214us Reduce Time: 1541us
+PID 4 Map Setup: 831651us Map Time: 12699995us Reduce Setup: 15174638us Reduce Time: 1007us
+PID 5 Map Setup: 385337us Map Time: 13095984us Reduce Setup: 14744262us Reduce Time: 897us
+PID 6 Map Setup: 450246us Map Time: 13239954us Reduce Setup: 14793679us Reduce Time: 2205us
+PID 7 Map Setup: 528249us Map Time: 13751953us Reduce Setup: 14276444us Reduce Time: 2847us
+PID 8 Map Setup: 256677us Map Time: 12683826us Reduce Setup: 15390965us Reduce Time: 3035us
+PID 9 Map Setup: 600387us Map Time: 13275811us Reduce Setup: 14713621us Reduce Time: 6075us
+PID 10 Map Setup: 334376us Map Time: 13227761us Reduce Setup: 14646417us Reduce Time: 891us
+PID 11 Map Setup: 394875us Map Time: 12935117us Reduce Setup: 15080232us Reduce Time: 4577us
+PID 12 Map Setup: 291196us Map Time: 12695803us Reduce Setup: 15284568us Reduce Time: 1679us
+PID 13 Map Setup: 81303us Map Time: 12335343us Reduce Setup: 15788950us Reduce Time: 1429us
+PID 14 Map Setup: 101126us Map Time: 13118826us Reduce Setup: 14916545us Reduce Time: 4135us
+PID 15 Map Setup: 752640us Map Time: 12148656us Reduce Setup: 15873075us Reduce Time: 3672us
+PID 16 Map Setup: 182439us Map Time: 12834011us Reduce Setup: 15215349us Reduce Time: 2899us
+PID 17 Map Setup: 209073us Map Time: 11871225us Reduce Setup: 16099718us Reduce Time: 1311us
+PID 18 Map Setup: 684484us Map Time: 13275851us Reduce Setup: 14551014us Reduce Time: 2469us
+PID 19 Map Setup: 592033us Map Time: 12331344us Reduce Setup: 15653109us Reduce Time: 1855us
+PID 20 Map Setup: 564844us Map Time: 12803826us Reduce Setup: 15125836us Reduce Time: 1396us
+PID 21 Map Setup: 668065us Map Time: 12759868us Reduce Setup: 15049420us Reduce Time: 2660us
+PID 22 Map Setup: 358754us Map Time: 13451759us Reduce Setup: 14334435us Reduce Time: 2329us
+PID 23 Map Setup: 243231us Map Time: 12408732us Reduce Setup: 15620972us Reduce Time: 1912us
+PID 24 Map Setup: 227041us Map Time: 13803973us Reduce Setup: 14214553us Reduce Time: 1411us
+PID 25 Map Setup: 381077us Map Time: 12387867us Reduce Setup: 15458075us Reduce Time: 1513us
+PID 26 Map Setup: 340586us Map Time: 14127870us Reduce Setup: 13837785us Reduce Time: 3855us
+PID 27 Map Setup: 126277us Map Time: 11411955us Reduce Setup: 16360007us Reduce Time: 866us
+PID 28 Map Setup: 410112us Map Time: 13886038us Reduce Setup: 14221955us Reduce Time: 2130us
+PID 29 Map Setup: 135176us Map Time: 12282887us Reduce Setup: 15771704us Reduce Time: 2807us
+PID 30 Map Setup: 121002us Map Time: 12487819us Reduce Setup: 15564858us Reduce Time: 2160us
+PID 31 Map Setup: 156862us Map Time: 1us Reduce Setup: 28041243us Reduce Time: 1583us
+Word count time: 28178965us
+Pid 28 sending 43362 requests
+Pid 10 sending 42560 requests
+Pid 18 sending 44022 requests
+Pid 13 sending 40858 requests
+Pid 26 sending 43428 requests
+Pid 22 sending 43956 requests
+Pid 12 sending 41044 requests
+Pid 8 sending 39420 requests
+
+64 slots
+PID 0 Map Setup: 196059us Map Time: 13123799us Reduce Setup: 17341062us Reduce Time: 716us
+PID 1 Map Setup: 1352573us Map Time: 13043838us Reduce Setup: 17254189us Reduce Time: 4479us
+PID 2 Map Setup: 836945us Map Time: 13757029us Reduce Setup: 16272663us Reduce Time: 4637us
+PID 3 Map Setup: 1023977us Map Time: 13012581us Reduce Setup: 17099343us Reduce Time: 3118us
+PID 4 Map Setup: 1551698us Map Time: 13231790us Reduce Setup: 16825715us Reduce Time: 5181us
+PID 5 Map Setup: 1315898us Map Time: 14007990us Reduce Setup: 15723167us Reduce Time: 381us
+PID 6 Map Setup: 1634572us Map Time: 14307993us Reduce Setup: 15455294us Reduce Time: 4637us
+PID 7 Map Setup: 1068990us Map Time: 13239997us Reduce Setup: 16840970us Reduce Time: 3065us
+PID 8 Map Setup: 907923us Map Time: 13528831us Reduce Setup: 16472299us Reduce Time: 1547us
+PID 9 Map Setup: 1503411us Map Time: 13675996us Reduce Setup: 16397350us Reduce Time: 3210us
+PID 10 Map Setup: 938974us Map Time: 13529549us Reduce Setup: 16211712us Reduce Time: 437us
+PID 11 Map Setup: 1373232us Map Time: 14064761us Reduce Setup: 15875564us Reduce Time: 5242us
+PID 12 Map Setup: 995154us Map Time: 12599994us Reduce Setup: 17269810us Reduce Time: 3011us
+PID 13 Map Setup: 1040458us Map Time: 11411988us Reduce Setup: 18291609us Reduce Time: 33527us
+PID 14 Map Setup: 1298795us Map Time: 13767995us Reduce Setup: 15894009us Reduce Time: 2078us
+PID 15 Map Setup: 1005364us Map Time: 12623829us Reduce Setup: 17456724us Reduce Time: 2877us
+PID 16 Map Setup: 1692255us Map Time: 13267718us Reduce Setup: 16792016us Reduce Time: 485us
+PID 17 Map Setup: 947359us Map Time: 13383993us Reduce Setup: 16588487us Reduce Time: 3808us
+PID 18 Map Setup: 1115645us Map Time: 13255744us Reduce Setup: 16649267us Reduce Time: 381us
+PID 19 Map Setup: 1767232us Map Time: 13299967us Reduce Setup: 16815003us Reduce Time: 8366us
+PID 20 Map Setup: 907257us Map Time: 12491975us Reduce Setup: 17550987us Reduce Time: 5514us
+PID 21 Map Setup: 1399221us Map Time: 13271862us Reduce Setup: 16752964us Reduce Time: 518us
+PID 22 Map Setup: 1134504us Map Time: 13387981us Reduce Setup: 16542592us Reduce Time: 2355us
+PID 23 Map Setup: 1476284us Map Time: 11404927us Reduce Setup: 18653056us Reduce Time: 3427us
+PID 24 Map Setup: 952700us Map Time: 13323604us Reduce Setup: 16325151us Reduce Time: 505us
+PID 25 Map Setup: 1056753us Map Time: 13472314us Reduce Setup: 16336865us Reduce Time: 1406us
+PID 26 Map Setup: 1572520us Map Time: 14091975us Reduce Setup: 15746201us Reduce Time: 2574us
+PID 27 Map Setup: 1072754us Map Time: 13403978us Reduce Setup: 16308003us Reduce Time: 3996us
+PID 28 Map Setup: 1327513us Map Time: 13583975us Reduce Setup: 16193264us Reduce Time: 1402us
+PID 29 Map Setup: 1131871us Map Time: 13287977us Reduce Setup: 16419557us Reduce Time: 962us
+PID 30 Map Setup: 1178287us Map Time: 12775063us Reduce Setup: 16867127us Reduce Time: 3543us
+PID 31 Map Setup: 1087661us Map Time: 12347981us Reduce Setup: 17791653us Reduce Time: 11031us
+PID 32 Map Setup: 1479033us Map Time: 13019975us Reduce Setup: 17081408us Reduce Time: 3857us
+PID 33 Map Setup: 770424us Map Time: 12385348us Reduce Setup: 17644424us Reduce Time: 659us
+PID 34 Map Setup: 1375061us Map Time: 12479965us Reduce Setup: 17517327us Reduce Time: 9046us
+PID 35 Map Setup: 956232us Map Time: 11699772us Reduce Setup: 18340145us Reduce Time: 1790us
+PID 36 Map Setup: 1110269us Map Time: 13546916us Reduce Setup: 16459315us Reduce Time: 13206us
+PID 37 Map Setup: 1084576us Map Time: 14067793us Reduce Setup: 15853955us Reduce Time: 9973us
+PID 38 Map Setup: 1158696us Map Time: 13082465us Reduce Setup: 16905673us Reduce Time: 1809us
+PID 39 Map Setup: 942084us Map Time: 12443984us Reduce Setup: 17681162us Reduce Time: 1434us
+PID 40 Map Setup: 1043684us Map Time: 13135777us Reduce Setup: 16971799us Reduce Time: 2205us
+PID 41 Map Setup: 1324053us Map Time: 13459775us Reduce Setup: 16522754us Reduce Time: 3272us
+PID 42 Map Setup: 963693us Map Time: 13515667us Reduce Setup: 16489792us Reduce Time: 578us
+PID 43 Map Setup: 973955us Map Time: 12624639us Reduce Setup: 17381025us Reduce Time: 9707us
+PID 44 Map Setup: 1242515us Map Time: 14115803us Reduce Setup: 15882185us Reduce Time: 3295us
+PID 45 Map Setup: 1307870us Map Time: 13535981us Reduce Setup: 16403963us Reduce Time: 16826us
+PID 46 Map Setup: 863402us Map Time: 14180498us Reduce Setup: 15757004us Reduce Time: 797us
+PID 47 Map Setup: 1993332us Map Time: 12927794us Reduce Setup: 17105838us Reduce Time: 4338us
+PID 48 Map Setup: 786468us Map Time: 13923960us Reduce Setup: 16134288us Reduce Time: 2631us
+PID 49 Map Setup: 837441us Map Time: 13407903us Reduce Setup: 16552487us Reduce Time: 4376us
+PID 50 Map Setup: 2217847us Map Time: 13416519us Reduce Setup: 16427466us Reduce Time: 582us
+PID 51 Map Setup: 983967us Map Time: 12680035us Reduce Setup: 17232268us Reduce Time: 962us
+PID 52 Map Setup: 1794386us Map Time: 14090063us Reduce Setup: 15781378us Reduce Time: 7697us
+PID 53 Map Setup: 1203504us Map Time: 13354779us Reduce Setup: 16482477us Reduce Time: 2110us
+PID 54 Map Setup: 1154660us Map Time: 12404180us Reduce Setup: 17292878us Reduce Time: 6917us
+PID 55 Map Setup: 1034411us Map Time: 11535941us Reduce Setup: 18274348us Reduce Time: 1696us
+PID 56 Map Setup: 1075445us Map Time: 13451976us Reduce Setup: 16386471us Reduce Time: 1883us
+PID 57 Map Setup: 1294480us Map Time: 13367085us Reduce Setup: 16384578us Reduce Time: 1086us
+PID 58 Map Setup: 1166004us Map Time: 13443797us Reduce Setup: 16265454us Reduce Time: 506us
+PID 59 Map Setup: 1164496us Map Time: 11519978us Reduce Setup: 17349525us Reduce Time: 413us
+PID 60 Map Setup: 1566701us Map Time: 13892671us Reduce Setup: 15794239us Reduce Time: 2231us
+PID 61 Map Setup: 1342168us Map Time: 13291104us Reduce Setup: 16312741us Reduce Time: 666us
+PID 62 Map Setup: 1225838us Map Time: 12535626us Reduce Setup: 17108406us Reduce Time: 1620us
+PID 63 Map Setup: 678276us Map Time: 53us Reduce Setup: 30118203us Reduce Time: 3122us
+Word count time: 30801496us
+Pid 56 sending 21376 requests
+Pid 38 sending 20220 requests
+Pid 27 sending 21472 requests
+Pid 13 sending 21472 requests
+Pid 57 sending 21184 requests
+
+128 slots
+PID 0 Map Setup: 1931687us Map Time: 15314284us Reduce Setup: 15132762us Reduce Time: 700us
+PID 1 Map Setup: 3676599us Map Time: 15711987us Reduce Setup: 13967023us Reduce Time: 3214us
+PID 2 Map Setup: 3225780us Map Time: 15127824us Reduce Setup: 13993516us Reduce Time: 5918us
+PID 3 Map Setup: 4651941us Map Time: 14727991us Reduce Setup: 14947406us Reduce Time: 9825us
+PID 4 Map Setup: 4184685us Map Time: 15503981us Reduce Setup: 13647427us Reduce Time: 4419us
+PID 5 Map Setup: 3551937us Map Time: 15543981us Reduce Setup: 13678425us Reduce Time: 136us
+PID 6 Map Setup: 5331937us Map Time: 15247981us Reduce Setup: 13551200us Reduce Time: 22089us
+PID 7 Map Setup: 3082331us Map Time: 13279861us Reduce Setup: 16399437us Reduce Time: 440us
+PID 8 Map Setup: 3151838us Map Time: 14847994us Reduce Setup: 14758515us Reduce Time: 2892us
+PID 9 Map Setup: 4404769us Map Time: 15007990us Reduce Setup: 14135485us Reduce Time: 732us
+PID 10 Map Setup: 3832422us Map Time: 13171347us Reduce Setup: 15503261us Reduce Time: 308us
+PID 11 Map Setup: 3844039us Map Time: 14663992us Reduce Setup: 14368605us Reduce Time: 19394us
+PID 12 Map Setup: 3639452us Map Time: 15162018us Reduce Setup: 13944164us Reduce Time: 1519us
+PID 13 Map Setup: 3969865us Map Time: 14907989us Reduce Setup: 13792001us Reduce Time: 380us
+PID 14 Map Setup: 4199626us Map Time: 15044344us Reduce Setup: 13431234us Reduce Time: 350us
+PID 15 Map Setup: 3982031us Map Time: 14767959us Reduce Setup: 14921542us Reduce Time: 8974us
+PID 16 Map Setup: 2900021us Map Time: 14755447us Reduce Setup: 14926237us Reduce Time: 384us
+PID 17 Map Setup: 3384579us Map Time: 15165722us Reduce Setup: 13331071us Reduce Time: 3412us
+PID 18 Map Setup: 3155015us Map Time: 14867371us Reduce Setup: 14609274us Reduce Time: 2551us
+PID 19 Map Setup: 5009856us Map Time: 14939960us Reduce Setup: 14265360us Reduce Time: 586us
+PID 20 Map Setup: 3455542us Map Time: 15445613us Reduce Setup: 13661863us Reduce Time: 6260us
+PID 21 Map Setup: 3975553us Map Time: 15535419us Reduce Setup: 13422054us Reduce Time: 223us
+PID 22 Map Setup: 3839994us Map Time: 14773453us Reduce Setup: 13952756us Reduce Time: 372us
+PID 23 Map Setup: 3511711us Map Time: 14739962us Reduce Setup: 14684020us Reduce Time: 861us
+PID 24 Map Setup: 3490588us Map Time: 14991951us Reduce Setup: 14045784us Reduce Time: 354us
+PID 25 Map Setup: 5080304us Map Time: 15023960us Reduce Setup: 13840750us Reduce Time: 19254us
+PID 26 Map Setup: 3713993us Map Time: 15004612us Reduce Setup: 14092573us Reduce Time: 673us
+PID 27 Map Setup: 3927683us Map Time: 14807953us Reduce Setup: 12612006us Reduce Time: 399us
+PID 28 Map Setup: 4435539us Map Time: 14787957us Reduce Setup: 13800602us Reduce Time: 6066us
+PID 29 Map Setup: 3796644us Map Time: 14975766us Reduce Setup: 13759158us Reduce Time: 664us
+PID 30 Map Setup: 3964899us Map Time: 15123943us Reduce Setup: 13417747us Reduce Time: 481us
+PID 31 Map Setup: 3377621us Map Time: 14891932us Reduce Setup: 14964720us Reduce Time: 725us
+PID 32 Map Setup: 3337497us Map Time: 14855100us Reduce Setup: 14918656us Reduce Time: 399us
+PID 33 Map Setup: 2863143us Map Time: 15479266us Reduce Setup: 14164689us Reduce Time: 302us
+PID 34 Map Setup: 3063522us Map Time: 15596647us Reduce Setup: 14022793us Reduce Time: 432us
+PID 35 Map Setup: 2907421us Map Time: 14811575us Reduce Setup: 14931527us Reduce Time: 1637us
+PID 36 Map Setup: 3239647us Map Time: 15027298us Reduce Setup: 14699893us Reduce Time: 1475us
+PID 37 Map Setup: 3235699us Map Time: 15647953us Reduce Setup: 13576718us Reduce Time: 182us
+PID 38 Map Setup: 4905505us Map Time: 14815319us Reduce Setup: 14706169us Reduce Time: 412us
+PID 39 Map Setup: 3949918us Map Time: 14791935us Reduce Setup: 14440962us Reduce Time: 358us
+PID 40 Map Setup: 3458503us Map Time: 14915957us Reduce Setup: 14291975us Reduce Time: 657us
+PID 41 Map Setup: 4614194us Map Time: 14915958us Reduce Setup: 13880710us Reduce Time: 449us
+PID 42 Map Setup: 3514177us Map Time: 15521211us Reduce Setup: 13519475us Reduce Time: 2381us
+PID 43 Map Setup: 4002682us Map Time: 15235956us Reduce Setup: 13706257us Reduce Time: 639us
+PID 44 Map Setup: 4257377us Map Time: 14855941us Reduce Setup: 14082299us Reduce Time: 3470us
+PID 45 Map Setup: 5179889us Map Time: 15103955us Reduce Setup: 13690452us Reduce Time: 783us
+PID 46 Map Setup: 3967279us Map Time: 13001651us Reduce Setup: 15802804us Reduce Time: 750us
+PID 47 Map Setup: 4359215us Map Time: 15043090us Reduce Setup: 14268495us Reduce Time: 589us
+PID 48 Map Setup: 3128433us Map Time: 12995960us Reduce Setup: 16416940us Reduce Time: 941us
+PID 49 Map Setup: 3309665us Map Time: 14983276us Reduce Setup: 14014555us Reduce Time: 684us
+PID 50 Map Setup: 5015117us Map Time: 15111304us Reduce Setup: 14062550us Reduce Time: 440us
+PID 51 Map Setup: 3379571us Map Time: 15135891us Reduce Setup: 14065369us Reduce Time: 724us
+PID 52 Map Setup: 5103915us Map Time: 15467944us Reduce Setup: 13553229us Reduce Time: 542us
+PID 53 Map Setup: 3670794us Map Time: 14707951us Reduce Setup: 14328268us Reduce Time: 799us
+PID 54 Map Setup: 3956176us Map Time: 14851287us Reduce Setup: 13341434us Reduce Time: 405us
+PID 55 Map Setup: 3765285us Map Time: 15020589us Reduce Setup: 13824202us Reduce Time: 1156us
+PID 56 Map Setup: 4735684us Map Time: 14823527us Reduce Setup: 12499902us Reduce Time: 292us
+PID 57 Map Setup: 4044802us Map Time: 13331955us Reduce Setup: 15367335us Reduce Time: 4639us
+PID 58 Map Setup: 4119041us Map Time: 14911407us Reduce Setup: 13788687us Reduce Time: 9422us
+PID 59 Map Setup: 4299201us Map Time: 14773261us Reduce Setup: 13381302us Reduce Time: 210us
+PID 60 Map Setup: 4660242us Map Time: 15596612us Reduce Setup: 13127741us Reduce Time: 1963us
+PID 61 Map Setup: 4199297us Map Time: 15655824us Reduce Setup: 12872229us Reduce Time: 375us
+PID 62 Map Setup: 3958821us Map Time: 15038958us Reduce Setup: 13507736us Reduce Time: 595us
+PID 63 Map Setup: 2678361us Map Time: 12939373us Reduce Setup: 16875110us Reduce Time: 443us
+PID 64 Map Setup: 2867540us Map Time: 14759980us Reduce Setup: 14857505us Reduce Time: 5167us
+PID 65 Map Setup: 3930910us Map Time: 14768001us Reduce Setup: 15076945us Reduce Time: 555us
+PID 66 Map Setup: 3148628us Map Time: 14807597us Reduce Setup: 15009567us Reduce Time: 574us
+PID 67 Map Setup: 3040070us Map Time: 13043571us Reduce Setup: 16549001us Reduce Time: 2595us
+PID 68 Map Setup: 3819628us Map Time: 14722618us Reduce Setup: 14932569us Reduce Time: 812us
+PID 69 Map Setup: 4854055us Map Time: 12999583us Reduce Setup: 16155421us Reduce Time: 508us
+PID 70 Map Setup: 3535872us Map Time: 14919981us Reduce Setup: 14545600us Reduce Time: 5539us
+PID 71 Map Setup: 3558891us Map Time: 13187977us Reduce Setup: 16508887us Reduce Time: 930us
+PID 72 Map Setup: 2891255us Map Time: 15505284us Reduce Setup: 14177325us Reduce Time: 500us
+PID 73 Map Setup: 4864548us Map Time: 13047568us Reduce Setup: 16674588us Reduce Time: 378us
+PID 74 Map Setup: 3541886us Map Time: 14771976us Reduce Setup: 14628783us Reduce Time: 9200us
+PID 75 Map Setup: 3457997us Map Time: 12911982us Reduce Setup: 16491780us Reduce Time: 632us
+PID 76 Map Setup: 3351156us Map Time: 13067937us Reduce Setup: 16437355us Reduce Time: 783us
+PID 77 Map Setup: 3042226us Map Time: 14851980us Reduce Setup: 14216695us Reduce Time: 8994us
+PID 78 Map Setup: 3341995us Map Time: 14724904us Reduce Setup: 14745988us Reduce Time: 3863us
+PID 79 Map Setup: 5155418us Map Time: 12863978us Reduce Setup: 16283802us Reduce Time: 4881us
+PID 80 Map Setup: 5384698us Map Time: 15039979us Reduce Setup: 14164290us Reduce Time: 203us
+PID 81 Map Setup: 4673084us Map Time: 14797223us Reduce Setup: 14320027us Reduce Time: 494us
+PID 82 Map Setup: 3627291us Map Time: 14916106us Reduce Setup: 12821580us Reduce Time: 2150us
+PID 83 Map Setup: 4509505us Map Time: 13323978us Reduce Setup: 15726164us Reduce Time: 6449us
+PID 84 Map Setup: 5445511us Map Time: 14863969us Reduce Setup: 13943267us Reduce Time: 332us
+PID 85 Map Setup: 4278631us Map Time: 14784387us Reduce Setup: 14164639us Reduce Time: 286us
+PID 86 Map Setup: 3851001us Map Time: 15675532us Reduce Setup: 13314007us Reduce Time: 383us
+PID 87 Map Setup: 5156251us Map Time: 13015971us Reduce Setup: 13228009us Reduce Time: 611us
+PID 88 Map Setup: 3739471us Map Time: 14871971us Reduce Setup: 13484272us Reduce Time: 803us
+PID 89 Map Setup: 3664633us Map Time: 14919970us Reduce Setup: 13877484us Reduce Time: 5114us
+PID 90 Map Setup: 5550377us Map Time: 14767971us Reduce Setup: 14138432us Reduce Time: 354us
+PID 91 Map Setup: 3924461us Map Time: 13123462us Reduce Setup: 15574686us Reduce Time: 479us
+PID 92 Map Setup: 3887622us Map Time: 14931569us Reduce Setup: 13835494us Reduce Time: 2103us
+PID 93 Map Setup: 4544980us Map Time: 15675971us Reduce Setup: 13138403us Reduce Time: 4210us
+PID 94 Map Setup: 4115785us Map Time: 14851940us Reduce Setup: 13950960us Reduce Time: 3615us
+PID 95 Map Setup: 4075703us Map Time: 10960948us Reduce Setup: 18388303us Reduce Time: 2043us
+PID 96 Map Setup: 3788442us Map Time: 14812953us Reduce Setup: 14527307us Reduce Time: 541us
+PID 97 Map Setup: 3588113us Map Time: 14915796us Reduce Setup: 14018825us Reduce Time: 525us
+PID 98 Map Setup: 4078702us Map Time: 15588097us Reduce Setup: 13562012us Reduce Time: 546us
+PID 99 Map Setup: 3447547us Map Time: 13083982us Reduce Setup: 16122603us Reduce Time: 728us
+PID 100 Map Setup: 4233586us Map Time: 14851567us Reduce Setup: 14370313us Reduce Time: 1024us
+PID 101 Map Setup: 3755219us Map Time: 15107981us Reduce Setup: 14106808us Reduce Time: 7295us
+PID 102 Map Setup: 3421800us Map Time: 14819982us Reduce Setup: 14297164us Reduce Time: 380us
+PID 103 Map Setup: 3572063us Map Time: 13079582us Reduce Setup: 16070766us Reduce Time: 376us
+PID 104 Map Setup: 4523942us Map Time: 14859979us Reduce Setup: 14286957us Reduce Time: 329us
+PID 105 Map Setup: 3755876us Map Time: 15499569us Reduce Setup: 13611070us Reduce Time: 370us
+PID 106 Map Setup: 4787858us Map Time: 14879978us Reduce Setup: 13532786us Reduce Time: 11213us
+PID 107 Map Setup: 3683933us Map Time: 11955568us Reduce Setup: 17081058us Reduce Time: 593us
+PID 108 Map Setup: 3767456us Map Time: 15503978us Reduce Setup: 13284290us Reduce Time: 320us
+PID 109 Map Setup: 3655683us Map Time: 15471569us Reduce Setup: 13493243us Reduce Time: 441us
+PID 110 Map Setup: 3547936us Map Time: 15679587us Reduce Setup: 13334779us Reduce Time: 244us
+PID 111 Map Setup: 5160256us Map Time: 13647978us Reduce Setup: 15194163us Reduce Time: 2831us
+PID 112 Map Setup: 5350568us Map Time: 15496154us Reduce Setup: 13242153us Reduce Time: 4628us
+PID 113 Map Setup: 3859487us Map Time: 13087982us Reduce Setup: 15776490us Reduce Time: 259us
+PID 114 Map Setup: 4891434us Map Time: 14899978us Reduce Setup: 11656003us Reduce Time: 173us
+PID 115 Map Setup: 4272232us Map Time: 13235973us Reduce Setup: 15473267us Reduce Time: 395us
+PID 116 Map Setup: 4650996us Map Time: 15827978us Reduce Setup: 12841116us Reduce Time: 661us
+PID 117 Map Setup: 4223401us Map Time: 15631563us Reduce Setup: 13072193us Reduce Time: 5606us
+PID 118 Map Setup: 4024973us Map Time: 14751974us Reduce Setup: 13866999us Reduce Time: 271us
+PID 119 Map Setup: 3866851us Map Time: 13547546us Reduce Setup: 14913698us Reduce Time: 112us
+PID 120 Map Setup: 3930612us Map Time: 14931962us Reduce Setup: 13790928us Reduce Time: 665us
+PID 121 Map Setup: 4334799us Map Time: 14935977us Reduce Setup: 13690474us Reduce Time: 518us
+PID 122 Map Setup: 3895188us Map Time: 14779967us Reduce Setup: 13935931us Reduce Time: 378us
+PID 123 Map Setup: 4107460us Map Time: 13179972us Reduce Setup: 13744010us Reduce Time: 3992us
+PID 124 Map Setup: 4358519us Map Time: 15063979us Reduce Setup: 13479677us Reduce Time: 554us
+PID 125 Map Setup: 4179618us Map Time: 14863978us Reduce Setup: 13611689us Reduce Time: 415us
+PID 126 Map Setup: 4701498us Map Time: 14787974us Reduce Setup: 13388865us Reduce Time: 19139us
+PID 127 Map Setup: 3638139us Map Time: 3us Reduce Setup: 29795396us Reduce Time: 398us
+Word count time: 32491405us
+Pid 126 sending 10864 requests
+Pid 122 sending 10832 requests
+Pid 62 sending 10768 requests
+Pid 60 sending 10816 requests
+
+255 slots
+PID 0 Map Setup: 4347818us Map Time: 15319142us Reduce Setup: 17460078us Reduce Time: 487us
+PID 1 Map Setup: 5075678us Map Time: 14875988us Reduce Setup: 18168343us Reduce Time: 6002us
+PID 2 Map Setup: 7343803us Map Time: 16111979us Reduce Setup: 13861626us Reduce Time: 187us
+PID 3 Map Setup: 4147488us Map Time: 13977622us Reduce Setup: 19407419us Reduce Time: 1311us
+PID 4 Map Setup: 5647296us Map Time: 13643978us Reduce Setup: 18446757us Reduce Time: 414us
+PID 5 Map Setup: 8985564us Map Time: 13751981us Reduce Setup: 14016006us Reduce Time: 16us
+PID 6 Map Setup: 9735754us Map Time: 11771946us Reduce Setup: 17356856us Reduce Time: 616us
+PID 7 Map Setup: 4311110us Map Time: 15263255us Reduce Setup: 17694209us Reduce Time: 121us
+PID 8 Map Setup: 5647594us Map Time: 15415662us Reduce Setup: 17282845us Reduce Time: 377us
+PID 9 Map Setup: 7281482us Map Time: 15361988us Reduce Setup: 17017365us Reduce Time: 1905us
+PID 10 Map Setup: 8063695us Map Time: 15858123us Reduce Setup: 14935358us Reduce Time: 157us
+PID 11 Map Setup: 7882099us Map Time: 16115684us Reduce Setup: 12112004us Reduce Time: 10us
+PID 12 Map Setup: 7919294us Map Time: 15379983us Reduce Setup: 13833125us Reduce Time: 17605us
+PID 13 Map Setup: 10635669us Map Time: 15463983us Reduce Setup: 13492262us Reduce Time: 646us
+PID 14 Map Setup: 9187613us Map Time: 15283981us Reduce Setup: 13275821us Reduce Time: 166us
+PID 15 Map Setup: 4342060us Map Time: 13698813us Reduce Setup: 18948824us Reduce Time: 14832us
+PID 16 Map Setup: 6405795us Map Time: 15218531us Reduce Setup: 17952561us Reduce Time: 4717us
+PID 17 Map Setup: 4462705us Map Time: 15191010us Reduce Setup: 18082463us Reduce Time: 6685us
+PID 18 Map Setup: 4660829us Map Time: 16088230us Reduce Setup: 16799518us Reduce Time: 459us
+PID 19 Map Setup: 4941197us Map Time: 15385989us Reduce Setup: 16403230us Reduce Time: 199us
+PID 20 Map Setup: 6793782us Map Time: 14818357us Reduce Setup: 17598450us Reduce Time: 824us
+PID 21 Map Setup: 7396873us Map Time: 15374746us Reduce Setup: 16352456us Reduce Time: 393us
+PID 22 Map Setup: 6011764us Map Time: 14986748us Reduce Setup: 16014100us Reduce Time: 5499us
+PID 23 Map Setup: 7623635us Map Time: 15510642us Reduce Setup: 12964018us Reduce Time: 21us
+PID 24 Map Setup: 7968193us Map Time: 15831946us Reduce Setup: 14467286us Reduce Time: 775us
+PID 25 Map Setup: 9116995us Map Time: 16147987us Reduce Setup: 13814475us Reduce Time: 493us
+PID 26 Map Setup: 8332909us Map Time: 15306721us Reduce Setup: 13285072us Reduce Time: 9169us
+PID 27 Map Setup: 9852164us Map Time: 14942378us Reduce Setup: 14193122us Reduce Time: 492us
+PID 28 Map Setup: 9638539us Map Time: 15083945us Reduce Setup: 13863688us Reduce Time: 2356us
+PID 29 Map Setup: 8814504us Map Time: 15007952us Reduce Setup: 13746184us Reduce Time: 788us
+PID 30 Map Setup: 8708376us Map Time: 15536165us Reduce Setup: 12969643us Reduce Time: 447us
+PID 31 Map Setup: 5471481us Map Time: 14980365us Reduce Setup: 18273105us Reduce Time: 291us
+PID 32 Map Setup: 4727041us Map Time: 10879148us Reduce Setup: 22378033us Reduce Time: 3141us
+PID 33 Map Setup: 4478456us Map Time: 15602248us Reduce Setup: 16545701us Reduce Time: 139us
+PID 34 Map Setup: 4480471us Map Time: 15197325us Reduce Setup: 17944193us Reduce Time: 2216us
+PID 35 Map Setup: 5076862us Map Time: 14890673us Reduce Setup: 18186381us Reduce Time: 370us
+PID 36 Map Setup: 4011553us Map Time: 15220316us Reduce Setup: 16983655us Reduce Time: 11810us
+PID 37 Map Setup: 6799885us Map Time: 15237824us Reduce Setup: 16518506us Reduce Time: 162us
+PID 38 Map Setup: 6601479us Map Time: 14407950us Reduce Setup: 18431763us Reduce Time: 7162us
+PID 39 Map Setup: 6949149us Map Time: 14944332us Reduce Setup: 17346354us Reduce Time: 618us
+PID 40 Map Setup: 5068520us Map Time: 14470932us Reduce Setup: 15801369us Reduce Time: 2us
+PID 41 Map Setup: 5858852us Map Time: 13639946us Reduce Setup: 18721228us Reduce Time: 4860us
+PID 42 Map Setup: 5602569us Map Time: 14347951us Reduce Setup: 16936772us Reduce Time: 563us
+PID 43 Map Setup: 6636335us Map Time: 14282828us Reduce Setup: 16486710us Reduce Time: 21355us
+PID 44 Map Setup: 7233718us Map Time: 16283119us Reduce Setup: 15197488us Reduce Time: 217us
+PID 45 Map Setup: 7104019us Map Time: 16170331us Reduce Setup: 15213713us Reduce Time: 7326us
+PID 46 Map Setup: 7055896us Map Time: 15243661us Reduce Setup: 16122638us Reduce Time: 989us
+PID 47 Map Setup: 8224605us Map Time: 15198991us Reduce Setup: 15204455us Reduce Time: 947us
+PID 48 Map Setup: 8919137us Map Time: 15118463us Reduce Setup: 15216369us Reduce Time: 198us
+PID 49 Map Setup: 7806839us Map Time: 16414427us Reduce Setup: 13528574us Reduce Time: 11027us
+PID 50 Map Setup: 9320810us Map Time: 15999992us Reduce Setup: 14218195us Reduce Time: 499us
+PID 51 Map Setup: 8602710us Map Time: 15779929us Reduce Setup: 13328546us Reduce Time: 265us
+PID 52 Map Setup: 7932655us Map Time: 11367951us Reduce Setup: 18494787us Reduce Time: 1852us
+PID 53 Map Setup: 8522889us Map Time: 15159767us Reduce Setup: 13647991us Reduce Time: 882us
+PID 54 Map Setup: 7549424us Map Time: 15459949us Reduce Setup: 14139793us Reduce Time: 279us
+PID 55 Map Setup: 8957204us Map Time: 14383966us Reduce Setup: 14660455us Reduce Time: 369us
+PID 56 Map Setup: 8210758us Map Time: 15459028us Reduce Setup: 13610309us Reduce Time: 582us
+PID 57 Map Setup: 10287502us Map Time: 16055948us Reduce Setup: 12670215us Reduce Time: 382us
+PID 58 Map Setup: 10771706us Map Time: 15031946us Reduce Setup: 13473315us Reduce Time: 256us
+PID 59 Map Setup: 9419560us Map Time: 13451994us Reduce Setup: 14595311us Reduce Time: 167us
+PID 60 Map Setup: 8590214us Map Time: 11831086us Reduce Setup: 16879238us Reduce Time: 13382us
+PID 61 Map Setup: 9285385us Map Time: 16131935us Reduce Setup: 12169651us Reduce Time: 179us
+PID 62 Map Setup: 9135002us Map Time: 14442883us Reduce Setup: 13658778us Reduce Time: 153us
+PID 63 Map Setup: 4251236us Map Time: 14455172us Reduce Setup: 18645593us Reduce Time: 7723us
+PID 64 Map Setup: 4594615us Map Time: 14903947us Reduce Setup: 17701189us Reduce Time: 228us
+PID 65 Map Setup: 6043211us Map Time: 15043991us Reduce Setup: 17855952us Reduce Time: 417us
+PID 66 Map Setup: 4309465us Map Time: 15493668us Reduce Setup: 17597265us Reduce Time: 449us
+PID 67 Map Setup: 6287777us Map Time: 14835951us Reduce Setup: 15224006us Reduce Time: 24us
+PID 68 Map Setup: 4825165us Map Time: 13686492us Reduce Setup: 17150539us Reduce Time: 15us
+PID 69 Map Setup: 6189094us Map Time: 14319994us Reduce Setup: 18689132us Reduce Time: 326us
+PID 70 Map Setup: 6157481us Map Time: 15305802us Reduce Setup: 16471660us Reduce Time: 736us
+PID 71 Map Setup: 4443975us Map Time: 16047683us Reduce Setup: 17159632us Reduce Time: 1014us
+PID 72 Map Setup: 4109185us Map Time: 14899950us Reduce Setup: 17566549us Reduce Time: 117us
+PID 73 Map Setup: 4290008us Map Time: 15091191us Reduce Setup: 18041668us Reduce Time: 444us
+PID 74 Map Setup: 4289192us Map Time: 15164671us Reduce Setup: 17827669us Reduce Time: 345us
+PID 75 Map Setup: 6523530us Map Time: 15288964us Reduce Setup: 16771754us Reduce Time: 5094us
+PID 76 Map Setup: 4813167us Map Time: 16333441us Reduce Setup: 16539991us Reduce Time: 326us
+PID 77 Map Setup: 4769738us Map Time: 14844271us Reduce Setup: 17892863us Reduce Time: 126us
+PID 78 Map Setup: 6903854us Map Time: 15623954us Reduce Setup: 17211703us Reduce Time: 840us
+PID 79 Map Setup: 4992893us Map Time: 15050452us Reduce Setup: 17201285us Reduce Time: 254us
+PID 80 Map Setup: 5289020us Map Time: 13566530us Reduce Setup: 18639358us Reduce Time: 3467us
+PID 81 Map Setup: 7245401us Map Time: 15285598us Reduce Setup: 16939748us Reduce Time: 15722us
+PID 82 Map Setup: 5292176us Map Time: 15203951us Reduce Setup: 16881346us Reduce Time: 158us
+PID 83 Map Setup: 6498113us Map Time: 15807957us Reduce Setup: 16429848us Reduce Time: 5471us
+PID 84 Map Setup: 6084797us Map Time: 14801217us Reduce Setup: 17463837us Reduce Time: 5136us
+PID 85 Map Setup: 5123524us Map Time: 14205525us Reduce Setup: 18036987us Reduce Time: 4082us
+PID 86 Map Setup: 6072473us Map Time: 15028070us Reduce Setup: 17080532us Reduce Time: 204us
+PID 87 Map Setup: 7448151us Map Time: 14001780us Reduce Setup: 17730530us Reduce Time: 224us
+PID 88 Map Setup: 5721402us Map Time: 14741569us Reduce Setup: 16906012us Reduce Time: 4620us
+PID 89 Map Setup: 7405276us Map Time: 11555087us Reduce Setup: 19940996us Reduce Time: 557us
+PID 90 Map Setup: 6467664us Map Time: 15371994us Reduce Setup: 15539170us Reduce Time: 4990us
+PID 91 Map Setup: 7263593us Map Time: 14939938us Reduce Setup: 16128683us Reduce Time: 237us
+PID 92 Map Setup: 6712788us Map Time: 15223954us Reduce Setup: 16102196us Reduce Time: 467us
+PID 93 Map Setup: 6224233us Map Time: 15055542us Reduce Setup: 15434092us Reduce Time: 5077us
+PID 94 Map Setup: 7903719us Map Time: 15306637us Reduce Setup: 15581306us Reduce Time: 10251us
+PID 95 Map Setup: 9227762us Map Time: 15131954us Reduce Setup: 15004910us Reduce Time: 212us
+PID 96 Map Setup: 9219719us Map Time: 15815940us Reduce Setup: 14488363us Reduce Time: 7222us
+PID 97 Map Setup: 7254431us Map Time: 15327973us Reduce Setup: 15160534us Reduce Time: 571us
+PID 98 Map Setup: 8809602us Map Time: 15274709us Reduce Setup: 14503527us Reduce Time: 207us
+PID 99 Map Setup: 9054653us Map Time: 14971998us Reduce Setup: 15097452us Reduce Time: 659us
+PID 100 Map Setup: 9365222us Map Time: 15098489us Reduce Setup: 14206241us Reduce Time: 431us
+PID 101 Map Setup: 8505882us Map Time: 15107951us Reduce Setup: 14394552us Reduce Time: 143us
+PID 102 Map Setup: 8700059us Map Time: 14065998us Reduce Setup: 16119451us Reduce Time: 583us
+PID 103 Map Setup: 9266770us Map Time: 15640273us Reduce Setup: 13122894us Reduce Time: 153us
+PID 104 Map Setup: 8162788us Map Time: 15371994us Reduce Setup: 13825828us Reduce Time: 231us
+PID 105 Map Setup: 8026579us Map Time: 15283994us Reduce Setup: 13905834us Reduce Time: 34502us
+PID 106 Map Setup: 8139320us Map Time: 15339907us Reduce Setup: 14439838us Reduce Time: 6271us
+PID 107 Map Setup: 7744405us Map Time: 16039112us Reduce Setup: 12960000us Reduce Time: 12037us
+PID 108 Map Setup: 8137036us Map Time: 14903964us Reduce Setup: 14002422us Reduce Time: 174us
+PID 109 Map Setup: 8008897us Map Time: 14867942us Reduce Setup: 14833935us Reduce Time: 375us
+PID 110 Map Setup: 8947834us Map Time: 15639718us Reduce Setup: 13848786us Reduce Time: 15229us
+PID 111 Map Setup: 8648464us Map Time: 14331180us Reduce Setup: 14603860us Reduce Time: 3319us
+PID 112 Map Setup: 10159211us Map Time: 15646559us Reduce Setup: 13318192us Reduce Time: 488us
+PID 113 Map Setup: 9137997us Map Time: 15079993us Reduce Setup: 13540749us Reduce Time: 85us
+PID 114 Map Setup: 9699918us Map Time: 15057040us Reduce Setup: 14076045us Reduce Time: 1056us
+PID 115 Map Setup: 10661233us Map Time: 15903950us Reduce Setup: 12890483us Reduce Time: 639us
+PID 116 Map Setup: 9017053us Map Time: 15029241us Reduce Setup: 13580513us Reduce Time: 36246us
+PID 117 Map Setup: 10158402us Map Time: 15738598us Reduce Setup: 12929594us Reduce Time: 5658us
+PID 118 Map Setup: 10060562us Map Time: 13527943us Reduce Setup: 15094628us Reduce Time: 799us
+PID 119 Map Setup: 8749257us Map Time: 14607946us Reduce Setup: 14006857us Reduce Time: 3777us
+PID 120 Map Setup: 10032357us Map Time: 15511417us Reduce Setup: 12960993us Reduce Time: 488us
+PID 121 Map Setup: 9120687us Map Time: 14967148us Reduce Setup: 13228400us Reduce Time: 9348us
+PID 122 Map Setup: 8717299us Map Time: 15638918us Reduce Setup: 12851829us Reduce Time: 348us
+PID 123 Map Setup: 9761499us Map Time: 14907945us Reduce Setup: 13485536us Reduce Time: 205us
+PID 124 Map Setup: 8935593us Map Time: 14367945us Reduce Setup: 14042644us Reduce Time: 6538us
+PID 125 Map Setup: 9057181us Map Time: 14946891us Reduce Setup: 13410960us Reduce Time: 311us
+PID 126 Map Setup: 9058316us Map Time: 14318101us Reduce Setup: 14037532us Reduce Time: 954us
+PID 127 Map Setup: 5199400us Map Time: 11781888us Reduce Setup: 21073702us Reduce Time: 473us
+PID 128 Map Setup: 4480545us Map Time: 15007293us Reduce Setup: 17226096us Reduce Time: 5486us
+PID 129 Map Setup: 4383864us Map Time: 15086623us Reduce Setup: 17923999us Reduce Time: 1627us
+PID 130 Map Setup: 5100648us Map Time: 14735979us Reduce Setup: 16942494us Reduce Time: 26719us
+PID 131 Map Setup: 4338994us Map Time: 10924954us Reduce Setup: 22093623us Reduce Time: 655us
+PID 132 Map Setup: 5272263us Map Time: 15466679us Reduce Setup: 17668364us Reduce Time: 1113us
+PID 133 Map Setup: 4091495us Map Time: 14491985us Reduce Setup: 18748542us Reduce Time: 11245us
+PID 134 Map Setup: 5099538us Map Time: 15172448us Reduce Setup: 18020370us Reduce Time: 837us
+PID 135 Map Setup: 4479543us Map Time: 10867761us Reduce Setup: 20817993us Reduce Time: 5135us
+PID 136 Map Setup: 6565439us Map Time: 15237108us Reduce Setup: 14918662us Reduce Time: 3994us
+PID 137 Map Setup: 5722746us Map Time: 15420015us Reduce Setup: 16684746us Reduce Time: 100us
+PID 138 Map Setup: 4372686us Map Time: 15053779us Reduce Setup: 17575930us Reduce Time: 388us
+PID 139 Map Setup: 5695344us Map Time: 13703984us Reduce Setup: 19164061us Reduce Time: 751us
+PID 140 Map Setup: 6203613us Map Time: 15226461us Reduce Setup: 17730929us Reduce Time: 376us
+PID 141 Map Setup: 4677409us Map Time: 16324145us Reduce Setup: 15688187us Reduce Time: 171us
+PID 142 Map Setup: 6763791us Map Time: 15240156us Reduce Setup: 16759503us Reduce Time: 8329us
+PID 143 Map Setup: 5520907us Map Time: 11539977us Reduce Setup: 21533186us Reduce Time: 475us
+PID 144 Map Setup: 4666959us Map Time: 15031174us Reduce Setup: 17697391us Reduce Time: 1395us
+PID 145 Map Setup: 4244360us Map Time: 15163701us Reduce Setup: 17986097us Reduce Time: 2696us
+PID 146 Map Setup: 6056101us Map Time: 15351527us Reduce Setup: 17698447us Reduce Time: 196us
+PID 147 Map Setup: 4827494us Map Time: 14971101us Reduce Setup: 18048600us Reduce Time: 542us
+PID 148 Map Setup: 6585265us Map Time: 15305920us Reduce Setup: 17729424us Reduce Time: 698us
+PID 149 Map Setup: 4311515us Map Time: 11243979us Reduce Setup: 21839336us Reduce Time: 486us
+PID 150 Map Setup: 6071412us Map Time: 15338504us Reduce Setup: 17753065us Reduce Time: 324us
+PID 151 Map Setup: 5689129us Map Time: 11407911us Reduce Setup: 21393269us Reduce Time: 333us
+PID 152 Map Setup: 6423859us Map Time: 14904434us Reduce Setup: 17898905us Reduce Time: 6585us
+PID 153 Map Setup: 5503579us Map Time: 13875970us Reduce Setup: 18925132us Reduce Time: 409us
+PID 154 Map Setup: 5504805us Map Time: 15062390us Reduce Setup: 17790072us Reduce Time: 680us
+PID 155 Map Setup: 6654151us Map Time: 13595085us Reduce Setup: 19217009us Reduce Time: 732us
+PID 156 Map Setup: 4739505us Map Time: 15373410us Reduce Setup: 16043961us Reduce Time: 652us
+PID 157 Map Setup: 6794793us Map Time: 15667190us Reduce Setup: 17019582us Reduce Time: 279us
+PID 158 Map Setup: 6075767us Map Time: 15051646us Reduce Setup: 17156898us Reduce Time: 571us
+PID 159 Map Setup: 5296176us Map Time: 11595152us Reduce Setup: 20287039us Reduce Time: 42816us
+PID 160 Map Setup: 5795659us Map Time: 15533938us Reduce Setup: 14442954us Reduce Time: 12us
+PID 161 Map Setup: 5122679us Map Time: 14315612us Reduce Setup: 17843598us Reduce Time: 4451us
+PID 162 Map Setup: 7164421us Map Time: 14859061us Reduce Setup: 17059020us Reduce Time: 774us
+PID 163 Map Setup: 5546729us Map Time: 11271974us Reduce Setup: 20694354us Reduce Time: 311us
+PID 164 Map Setup: 7361299us Map Time: 13695974us Reduce Setup: 18442344us Reduce Time: 420us
+PID 165 Map Setup: 7341154us Map Time: 15479585us Reduce Setup: 16454355us Reduce Time: 6188us
+PID 166 Map Setup: 6601521us Map Time: 14967738us Reduce Setup: 17066849us Reduce Time: 1485us
+PID 167 Map Setup: 5166029us Map Time: 11291979us Reduce Setup: 20944800us Reduce Time: 531us
+PID 168 Map Setup: 5863635us Map Time: 14401463us Reduce Setup: 17679164us Reduce Time: 2222us
+PID 169 Map Setup: 5037984us Map Time: 14862114us Reduce Setup: 17457178us Reduce Time: 10781us
+PID 170 Map Setup: 7205370us Map Time: 14694858us Reduce Setup: 17611591us Reduce Time: 992us
+PID 171 Map Setup: 5600328us Map Time: 15019977us Reduce Setup: 16875210us Reduce Time: 188us
+PID 172 Map Setup: 6184934us Map Time: 15331573us Reduce Setup: 16337908us Reduce Time: 201us
+PID 173 Map Setup: 7182635us Map Time: 15151977us Reduce Setup: 16158868us Reduce Time: 8947us
+PID 174 Map Setup: 7231703us Map Time: 15230841us Reduce Setup: 16805744us Reduce Time: 313us
+PID 175 Map Setup: 5849253us Map Time: 11263064us Reduce Setup: 19517387us Reduce Time: 5993us
+PID 176 Map Setup: 7828396us Map Time: 15827140us Reduce Setup: 14403757us Reduce Time: 545us
+PID 177 Map Setup: 5972311us Map Time: 14833983us Reduce Setup: 16778114us Reduce Time: 1089us
+PID 178 Map Setup: 7156645us Map Time: 14776039us Reduce Setup: 16568817us Reduce Time: 181us
+PID 179 Map Setup: 6199141us Map Time: 14724724us Reduce Setup: 16756713us Reduce Time: 260us
+PID 180 Map Setup: 6083690us Map Time: 15123976us Reduce Setup: 16414679us Reduce Time: 793us
+PID 181 Map Setup: 6457994us Map Time: 15475263us Reduce Setup: 15983726us Reduce Time: 2778us
+PID 182 Map Setup: 5991539us Map Time: 15248255us Reduce Setup: 16379260us Reduce Time: 665us
+PID 183 Map Setup: 6192497us Map Time: 11954968us Reduce Setup: 18114869us Reduce Time: 5079us
+PID 184 Map Setup: 6729927us Map Time: 16114716us Reduce Setup: 14370494us Reduce Time: 5295us
+PID 185 Map Setup: 7835469us Map Time: 15275966us Reduce Setup: 15038775us Reduce Time: 26757us
+PID 186 Map Setup: 8313720us Map Time: 15324177us Reduce Setup: 15971444us Reduce Time: 480us
+PID 187 Map Setup: 7153980us Map Time: 15223968us Reduce Setup: 15050850us Reduce Time: 5457us
+PID 188 Map Setup: 5999544us Map Time: 15151968us Reduce Setup: 15175283us Reduce Time: 3us
+PID 189 Map Setup: 6376603us Map Time: 15051174us Reduce Setup: 16136612us Reduce Time: 7344us
+PID 190 Map Setup: 7405158us Map Time: 15251584us Reduce Setup: 15975163us Reduce Time: 346us
+PID 191 Map Setup: 8479066us Map Time: 11466298us Reduce Setup: 18809744us Reduce Time: 545us
+PID 192 Map Setup: 8802601us Map Time: 14935764us Reduce Setup: 15336094us Reduce Time: 6326us
+PID 193 Map Setup: 8421090us Map Time: 13399751us Reduce Setup: 16622792us Reduce Time: 388us
+PID 194 Map Setup: 9256020us Map Time: 15583713us Reduce Setup: 13775388us Reduce Time: 179us
+PID 195 Map Setup: 7731383us Map Time: 11572150us Reduce Setup: 17420082us Reduce Time: 9024us
+PID 196 Map Setup: 9022149us Map Time: 16103085us Reduce Setup: 14329085us Reduce Time: 29937us
+PID 197 Map Setup: 7305436us Map Time: 15299963us Reduce Setup: 14988226us Reduce Time: 154us
+PID 198 Map Setup: 9189665us Map Time: 15018007us Reduce Setup: 15406826us Reduce Time: 798us
+PID 199 Map Setup: 7816103us Map Time: 11471966us Reduce Setup: 16508011us Reduce Time: 4002us
+PID 200 Map Setup: 7715438us Map Time: 15254745us Reduce Setup: 14753486us Reduce Time: 566us
+PID 201 Map Setup: 9410965us Map Time: 15306740us Reduce Setup: 14469263us Reduce Time: 38958us
+PID 202 Map Setup: 9748036us Map Time: 16215664us Reduce Setup: 13825821us Reduce Time: 394us
+PID 203 Map Setup: 9415552us Map Time: 15339975us Reduce Setup: 14805768us Reduce Time: 7524us
+PID 204 Map Setup: 7803732us Map Time: 14615959us Reduce Setup: 15369397us Reduce Time: 15054us
+PID 205 Map Setup: 9444378us Map Time: 15539358us Reduce Setup: 13722972us Reduce Time: 1us
+PID 206 Map Setup: 7550579us Map Time: 16363979us Reduce Setup: 13733353us Reduce Time: 673us
+PID 207 Map Setup: 8369587us Map Time: 11287936us Reduce Setup: 18464776us Reduce Time: 577us
+PID 208 Map Setup: 9667558us Map Time: 14847963us Reduce Setup: 14559798us Reduce Time: 324us
+PID 209 Map Setup: 8409296us Map Time: 15975033us Reduce Setup: 13621195us Reduce Time: 256us
+PID 210 Map Setup: 9735981us Map Time: 15023753us Reduce Setup: 14459012us Reduce Time: 379us
+PID 211 Map Setup: 7915220us Map Time: 15296035us Reduce Setup: 14401198us Reduce Time: 4548us
+PID 212 Map Setup: 8263651us Map Time: 16111974us Reduce Setup: 12602268us Reduce Time: 9527us
+PID 213 Map Setup: 9671607us Map Time: 15179975us Reduce Setup: 14775233us Reduce Time: 639us
+PID 214 Map Setup: 9544700us Map Time: 15018916us Reduce Setup: 14761228us Reduce Time: 480us
+PID 215 Map Setup: 9678186us Map Time: 11455444us Reduce Setup: 17139925us Reduce Time: 6680us
+PID 216 Map Setup: 9636100us Map Time: 10123369us Reduce Setup: 18514448us Reduce Time: 693us
+PID 217 Map Setup: 10008984us Map Time: 15411971us Reduce Setup: 14033897us Reduce Time: 655us
+PID 218 Map Setup: 9925170us Map Time: 15411928us Reduce Setup: 13944056us Reduce Time: 6147us
+PID 219 Map Setup: 8786398us Map Time: 14065686us Reduce Setup: 14941610us Reduce Time: 158us
+PID 220 Map Setup: 8676656us Map Time: 15271419us Reduce Setup: 14081210us Reduce Time: 194us
+PID 221 Map Setup: 8198066us Map Time: 15535992us Reduce Setup: 13423050us Reduce Time: 554us
+PID 222 Map Setup: 8050802us Map Time: 15515966us Reduce Setup: 13906734us Reduce Time: 247us
+PID 223 Map Setup: 8435496us Map Time: 11719965us Reduce Setup: 17041376us Reduce Time: 161us
+PID 224 Map Setup: 8931614us Map Time: 14959965us Reduce Setup: 13913496us Reduce Time: 1325us
+PID 225 Map Setup: 8344641us Map Time: 14647441us Reduce Setup: 13828565us Reduce Time: 4260us
+PID 226 Map Setup: 10063147us Map Time: 13419966us Reduce Setup: 15050651us Reduce Time: 274us
+PID 227 Map Setup: 10275994us Map Time: 11133149us Reduce Setup: 17942331us Reduce Time: 7980us
+PID 228 Map Setup: 9162013us Map Time: 16083431us Reduce Setup: 12901391us Reduce Time: 611us
+PID 229 Map Setup: 8651667us Map Time: 15903971us Reduce Setup: 13165148us Reduce Time: 490us
+PID 230 Map Setup: 9868724us Map Time: 13499309us Reduce Setup: 15519156us Reduce Time: 304us
+PID 231 Map Setup: 8756374us Map Time: 11073658us Reduce Setup: 17659419us Reduce Time: 11352us
+PID 232 Map Setup: 9123497us Map Time: 15102667us Reduce Setup: 13581963us Reduce Time: 1306us
+PID 233 Map Setup: 10530450us Map Time: 15671272us Reduce Setup: 12833523us Reduce Time: 476us
+PID 234 Map Setup: 8805902us Map Time: 15703972us Reduce Setup: 12934732us Reduce Time: 308us
+PID 235 Map Setup: 8979556us Map Time: 15555188us Reduce Setup: 12876721us Reduce Time: 311us
+PID 236 Map Setup: 8660237us Map Time: 14410659us Reduce Setup: 14016826us Reduce Time: 364us
+PID 237 Map Setup: 9654695us Map Time: 14403972us Reduce Setup: 14081987us Reduce Time: 804us
+PID 238 Map Setup: 10619678us Map Time: 15295992us Reduce Setup: 12970110us Reduce Time: 210us
+PID 239 Map Setup: 9501524us Map Time: 10132481us Reduce Setup: 18228222us Reduce Time: 185us
+PID 240 Map Setup: 9452647us Map Time: 15151143us Reduce Setup: 13475548us Reduce Time: 310us
+PID 241 Map Setup: 9424375us Map Time: 15824323us Reduce Setup: 12430602us Reduce Time: 116us
+PID 242 Map Setup: 9013789us Map Time: 14687961us Reduce Setup: 13574303us Reduce Time: 13us
+PID 243 Map Setup: 8861973us Map Time: 15155176us Reduce Setup: 13141060us Reduce Time: 290us
+PID 244 Map Setup: 8878569us Map Time: 15479967us Reduce Setup: 13065766us Reduce Time: 214us
+PID 245 Map Setup: 9077363us Map Time: 15155978us Reduce Setup: 13047713us Reduce Time: 5015us
+PID 246 Map Setup: 9102464us Map Time: 14059968us Reduce Setup: 14547200us Reduce Time: 575us
+PID 247 Map Setup: 9003208us Map Time: 11617830us Reduce Setup: 16771275us Reduce Time: 798us
+PID 248 Map Setup: 9608523us Map Time: 15727968us Reduce Setup: 12396082us Reduce Time: 9764us
+PID 249 Map Setup: 9308685us Map Time: 14006945us Reduce Setup: 14208113us Reduce Time: 307us
+PID 250 Map Setup: 9226260us Map Time: 15555970us Reduce Setup: 12482897us Reduce Time: 108us
+PID 251 Map Setup: 9723607us Map Time: 13695965us Reduce Setup: 14668150us Reduce Time: 201us
+PID 252 Map Setup: 10023031us Map Time: 14535146us Reduce Setup: 13749553us Reduce Time: 5962us
+PID 253 Map Setup: 9239608us Map Time: 13595960us Reduce Setup: 14579273us Reduce Time: 353us
+PID 254 Map Setup: 9031860us Map Time: 14627683us Reduce Setup: 13453227us Reduce Time: 2us
+Word count time: 37261832us

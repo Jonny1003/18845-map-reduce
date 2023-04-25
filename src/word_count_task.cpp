@@ -19,7 +19,7 @@
 #include <iostream>
 #include <numeric>
 
-#define TRUNCATION_SIZE 3
+#define TRUNCATION_SIZE 2
 
 // Map interface
 std::vector<std::pair<std::string, int>> WordCountTask::map(const std::string& key, const std::string& fileLoc) const {
@@ -32,7 +32,7 @@ std::vector<std::pair<std::string, int>> WordCountTask::map(const std::string& k
             sTemp += f.get();
         }
         if (sTemp.size() == TRUNCATION_SIZE) {
-            if (tokenCounts.contains(sTemp)) {
+            if (tokenCounts.find(sTemp) != tokenCounts.cend()) {
                 ++tokenCounts[sTemp];
             } else {
                 tokenCounts[sTemp] = 1;
